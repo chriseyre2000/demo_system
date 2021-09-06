@@ -11,11 +11,18 @@ defmodule ExampleSystemWeb.Math.Sum do
 
   @impl Phoenix.LiveView
   def mount(_params, _session, socket) do
+    if connected?(socket) do
+      require IEx
+      IEx.pry()
+    end
+
     {:ok, assign(socket, operations: [], data: data())}
   end
 
   @impl Phoenix.LiveView
   def handle_event("submit", %{"data" => %{"to" => str_input}}, socket) do
+    require IEx
+    IEx.pry()
     {:noreply, start_sum(socket, str_input)}
   end
 

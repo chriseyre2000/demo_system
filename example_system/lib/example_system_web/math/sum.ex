@@ -11,11 +11,6 @@ defmodule ExampleSystemWeb.Math.Sum do
 
   @impl Phoenix.LiveView
   def mount(_params, _session, socket) do
-    if connected?(socket) do
-      require IEx
-      IEx.pry()
-    end
-
     {:ok, assign(socket, operations: [], data: data())}
   end
 

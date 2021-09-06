@@ -10,6 +10,7 @@
 
   <title>Hello ExampleSystem!</title>
   <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/assets/app.css") %>">
+  <%= csrf_meta_tag() %>
 </head>
 
 <body>

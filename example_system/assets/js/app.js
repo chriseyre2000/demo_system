@@ -15,7 +15,6 @@ let liveSocket = new LiveSocket("/live", Socket, {
 });
 
 // Connect if there are any LiveViews on the page
-console.log("what the fuck");
 liveSocket.connect();
 
 // Expose liveSocket on window for web console debug logs and latency simulation:
